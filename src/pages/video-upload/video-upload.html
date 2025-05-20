@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Video-upload</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Mirela Lupoaica" />
+    <meta name="keywords" content="video upload, video upload input" />
+    <meta
+      name="description"
+      content="Easily upload and manage videos with customizable forms and features."
+    />
+    <link rel="stylesheet" href="./video-upload.css" />
+    <script type="module" src="./video-upload.js"></script>
+  </head>
+
+  <body class="form-page">
+    <form>
+      <fieldset>
+        <legend><h1>Upload a video</h1></legend>
+        <div class="form-content">
+          <div class="input-group upload-group centered">
+            <label for="upload-file">
+              Select a video to upload
+              <img alt="upload-file" src="./../../../assets/upload.png" />
+            </label>
+            <input type="file" id="upload-file" name="upload-file" />
+          </div>
+          <div class="input-group centered">
+            <button class="submit-button" type="submit">Submit</button>
+          </div>
+
+          <div class="margin-top">
+            <p>The uploaded video has to respect the following criteria:</p>
+            <ol>
+              <li>To be of HD (720p) or Full HD (1024p) resolution</li>
+              <li>The video must not exceed 250MB</li>
+              <li>
+                It has do use one of the following formats and codecs, at the
+                specified minimum framerate:
+              </li>
+            </ol>
+          </div>
+          <div class="margin-top">
+            <table>
+              <thead>
+                <tr>
+                  <td></td>
+                  <th>Format</th>
+                  <th>Codec</th>
+                  <th>Minimum Framerate</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th rowspan="2">The most preferred formats</th>
+                  <td>MP4</td>
+                  <td>H.264</td>
+                  <td>64</td>
+                </tr>
+
+                <tr>
+                  <td>WebM</td>
+                  <td>H.264</td>
+                  <td>128</td>
+                </tr>
+
+                <tr>
+                  <td></td>
+                  <td>MKV</td>
+                  <td>HEVC</td>
+                  <td>64</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </body>
+</html>

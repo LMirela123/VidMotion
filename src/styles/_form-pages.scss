@@ -1,0 +1,88 @@
+.form-page {
+  background: radial-gradient(circle, #803abe, #5600a1);
+  background-attachment: fixed;
+
+  form {
+    margin: 0 auto;
+    max-width: 30rem;
+  }
+  
+  .input-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+
+    &.centered {
+      justify-content: center;
+    }
+  
+    label{
+      margin: 0 0.5rem;
+    }
+
+    button,
+    label {
+      cursor: pointer;
+    }
+  
+    input:not([type='checkbox']),
+    textarea {
+      border: 0.1rem solid #5600a1;
+      border-radius: 0.5rem;
+      padding: 0.7rem 1rem;
+      min-width: 12rem;
+      font-family: $default-font;
+      font-size: 1rem; 
+    }
+  
+    input[type='file'] {
+      opacity: 0;
+      position: absolute;
+      width: 0;
+      height: 0;
+    }
+  }
+  
+  fieldset {
+    margin: 1.5rem 1.5rem 3rem 1.5rem;
+    padding: 0 1rem 1rem 1rem;
+    border-radius: 1.5rem;
+
+    legend {
+      padding: 0 1rem;
+      color: #fff;
+
+      h1 {
+        font-weight: normal;
+      }
+    }
+  }
+  
+  .form-content {
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: #fff;
+  }
+  
+  .upload-group {
+    label {
+      cursor: pointer;
+
+      img {
+        margin-left: 1rem;
+        width: 2rem;
+        vertical-align: middle;
+      }
+    }
+  }
+  
+  .submit-button {
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    background: #5600a1;
+    font-size: 1.4rem;
+    color: #fff;
+    border: none;
+  }
+}

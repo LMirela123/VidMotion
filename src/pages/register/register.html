@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="./register.css" />
+    <script type="module" src="./register.js"></script>
+  </head>
+  <body class="form-page register-page">
+    <form id="register-form" action="/register" method="post">
+      <fieldset>
+        <legend><h1>Register</h1></legend>
+        <div class="form-content centered">
+          <div class="input-group">
+            <label for="username">Username:</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="username"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <label for="password">Password:</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="password"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <label for="description">Short description:</label>
+            <textarea
+              id="description"
+              name="description"
+              rows="5"
+              placeholder="Provide a brief description of your profile."
+            ></textarea>
+          </div>
+          <div class="input-group">
+            <label for="birthday">Birth date:</label>
+            <input type="date" id="birthday" name="birthday" min="1920-01-01" max="2025-12-31" />
+          </div>
+          <div class="input-group">
+            <label for="phone">Enter a phone number:</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Enter your phone number, e.g., +40 123 456 789"
+              required
+            />
+          </div>
+          <div class="input-group upload-group centered">
+            <label for="upload-file">
+              Upload a photo
+              <img alt="upload-file" src="./../../../assets/upload.png" />
+            </label>
+            <input type="file" id="upload-file" name="upload-file" />
+          </div>
+          <div class="input-group centered">
+            <input type="checkbox" id="age-consent" name="age-consent" />
+            <label for="age-consent">
+              I consent that my age is over 18.
+            </label>
+          </div>
+          <div class="input-group centered">
+            <button class="submit-button" type="submit">Register</button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+@import './../../styles/fonts';
+@import './../../styles/elements';
+@import './../../styles/page-layout';
+@import './../../styles/video-card';
+
+.home-page {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}

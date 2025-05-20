@@ -1,0 +1,11 @@
+@import './../../styles/fonts';
+@import './../../styles/elements';
+@import './../../styles/page-layout';
+@import './../../styles/form-pages';
+@import './../../styles/utils';
+
+.register-page {
+  form {
+    max-width: 34rem;
+  }
+}
