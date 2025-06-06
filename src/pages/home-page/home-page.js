@@ -1,3 +1,4 @@
+import './../../scripts/firebase.service.js'
 import { debounce } from './../../scripts/debounce.service.js';
 import { createDomElementsFromHtmlString } from './../../scripts/dom.service.js';
 import {

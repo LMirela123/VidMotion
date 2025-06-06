@@ -6,6 +6,7 @@ import {
 } from './../../scripts/field-validation.service.js';
 import { addFormSubmitEventListener } from './../../scripts/form-events.service.js';
 import {
+  createFooter,
   createHeader,
   createNavBar,
   runPageAnimations,
@@ -16,9 +17,9 @@ const registerForm = document.getElementById('register-form');
 initializePage();
 
 function initializePage() {
-  createNavBar();
-  createHeader();
   createFooter();
+  createNavBar();
+  createHeader(); 
   runPageAnimations();
   addFormSubmitEventListener(registerForm, validateRegisterForm);
 }
