@@ -1,4 +1,5 @@
 import './../../scripts/firebase.service.js'
+import { getEntries } from './../../scripts/firebase.service.js';
 import { debounce } from './../../scripts/debounce.service.js';
 import { createDomElementsFromHtmlString } from './../../scripts/dom.service.js';
 import {
@@ -25,8 +26,7 @@ async function initializePage() {
 
 async function getVideos() {
   try {
-    const response = await fetch('/mocks/videos.json');
-    const videos = await response.json();
+    const videos = await getEntries('videos');
     return videos;
   } catch (error) {
     console.error(error);
