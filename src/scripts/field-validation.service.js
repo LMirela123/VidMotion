@@ -1,5 +1,5 @@
-export function validateUsername(username) {
-    return /^[a-zA-Z0-9]{3,20}$/.test(username); 
+export function validateEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
 export function validatePassword(password) {

@@ -34,7 +34,7 @@ export function runPageAnimations() {
 export function createHeader() {
   const headerHtml = `
     <header class="site-header">
-      <h1>FirstWeb</h1>
+      <h1>VidMotion</h1>
       <h2>Your favourite video platform</h2>
     </header>
   `;
@@ -43,12 +43,21 @@ export function createHeader() {
 }
 
 export function createNavBar() {
+  const isUserLoggedIn = localStorage.getItem('userLoggedIn') === 'true';
+
   const navbarHtml = `
     <nav class="main-nav">
       <a href="/index.html">The newest videos</a>
-      <a href="/src/pages/video-upload/video-upload.html">Upload video</a>
-      <a href="/src/pages/login/login.html">Login</a>
-      <a href="/src/pages/register/register.html">Register</a>
+      ${
+        isUserLoggedIn
+          ? '<a href="/src/pages/video-upload/video-upload.html">Upload videos</a>'
+          : ''
+      }
+      ${
+        !isUserLoggedIn ? `
+          <a href="/src/pages/login/login.html">Login</a>
+          <a href="/src/pages/register/register.html">Register</a>
+      ` : ''}
     </nav>
   `;
 

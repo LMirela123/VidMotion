@@ -1,26 +1,44 @@
 [
   {
     "title": "Enjoy a day in the wild",
-    "url": "assets/video1.mp4"
+    "url": "assets/videos/video1.mp4",
+    "posterImageUrl": "",
+    "description": "A beautiful day in the wilderness, showcasing nature's beauty.",
+    "duration": "0:18"
   },
   {
     "title": "Enjoy another day in the wild",
-    "url": "assets/video2.mp4"
+    "url": "assets/videos/video2.mp4",
+    "posterImageUrl": "",
+    "description": "A serene day in the forest, capturing the essence of tranquility.",
+    "duration": "0:19"
   },
   {
     "title": "Something with USA elections",
-    "url": "assets/video1.mp4"
+    "url": "assets/videos/video1.mp4",
+    "posterImageUrl": "",
+    "description": "An insightful look into the USA elections process.",
+    "duration": "0:18"
   },
   {
     "title": "The unlimited relaxation mode",
-    "url": "assets/video2.mp4"
+    "url": "assets/videos/video2.mp4",
+    "posterImageUrl": "",
+    "description": "A deep dive into relaxation techniques and their benefits.",
+    "duration": "0:19"
   },
   {
     "title": "Debouncing technique",
-    "url": "assets/video1.mp4"
+    "url": "assets/videos/video1.mp4",
+    "posterImageUrl": "",
+    "description": "An explanation of the debouncing technique in programming.",
+    "duration": "0:18"
   },
   {
     "title": "Some other video",
-    "url": "assets/video2.mp4"
+    "url": "assets/videos/video2.mp4",
+    "posterImageUrl": "",
+    "description": "A brief overview of various programming concepts.",
+    "duration": "0:19"
   }
 ]
