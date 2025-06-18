@@ -15,7 +15,7 @@ let videos = [];
 initializePage();
 
 async function initializePage() {
-  createNavBar();
+  await createNavBar();
   createHeader();
   createFooter();
   runPageAnimations();

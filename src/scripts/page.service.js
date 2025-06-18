@@ -2,6 +2,8 @@
  * PAGE ANIMATIONS
  */
 
+import { getCurrentUser, isUserLoggedIn } from './firebase-auth.service';
+
 export function runMainMenuAnimation() {
   document.querySelector('.main-nav').classList.add('transitioned');
 }
@@ -42,19 +44,25 @@ export function createHeader() {
   document.body.innerHTML = headerHtml + document.body.innerHTML;
 }
 
-export function createNavBar() {
-  const isUserLoggedIn = localStorage.getItem('userLoggedIn') === 'true';
+export async function createNavBar() {
+  const isLoggedIn = await isUserLoggedIn();
+  const currentUser = await getCurrentUser();
+
+  console.log('Current user:', currentUser);
 
   const navbarHtml = `
     <nav class="main-nav">
       <a href="/index.html">The newest videos</a>
       ${
-        isUserLoggedIn
-          ? '<a href="/src/pages/video-upload/video-upload.html">Upload videos</a>'
+        isLoggedIn
+          ? `
+            <a href="/src/pages/video-upload/video-upload.html">Upload videos</a>
+            <button type="button">${currentUser.email}</button>
+          `
           : ''
       }
       ${
-        !isUserLoggedIn ? `
+        !isLoggedIn ? `
           <a href="/src/pages/login/login.html">Login</a>
           <a href="/src/pages/register/register.html">Register</a>
       ` : ''}

@@ -1,3 +1,4 @@
+import './../../scripts/firebase.service.js';
 import {
   createFooter,
   createHeader,
@@ -7,8 +8,8 @@ import {
 
 initializePage();
 
-function initializePage() {
-  createNavBar();
+async function initializePage() {
+  await createNavBar();
   createHeader();
   createFooter();
   runPageAnimations();

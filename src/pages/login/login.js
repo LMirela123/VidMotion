@@ -13,8 +13,8 @@ import { loginWithEmailAndPassword } from './../../scripts/firebase-auth.service
 
 initializePage();
 
-function initializePage() {
-  createNavBar();
+async function initializePage() {
+  await createNavBar();
   createHeader();
   createFooter();
   runPageAnimations();
@@ -51,6 +51,11 @@ async function loginUser() {
 
   if (validateLoginForm(email.value, password.value)) {
     const response = await loginWithEmailAndPassword(email.value, password.value);
-    console.log('Login response:', response);
+
+    if (response?.user?.accessToken) {
+      window.location.href = '/'; // Redirect to the main page after successful login
+    } else {
+      alert('Login failed for unknown reasons. Please try again.');
+    }
   }
 }

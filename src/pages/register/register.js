@@ -15,8 +15,8 @@ import { registerWithEmailAndPassword } from './../../scripts/firebase-auth.serv
 
 initializePage();
 
-function initializePage() {
-  createNavBar();
+async function initializePage() {
+  await createNavBar();
   createHeader();
   createFooter();
   runPageAnimations();
